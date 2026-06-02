@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMDX Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobile()">About</a>
+        <a href="#services" onclick="closeMobile()">Services</a>
+        <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+        <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#" class="nav-logo">SMD<span>X</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Start a Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-number">01</div>
+        <div class="hero-tag">— Web Design &amp; Development Studio</div>
+        <h1 class="hero-headline">
+            We craft<br /><em>digital</em><br />experiences.
+        </h1>
+        <div class="hero-sub-row">
+            <p class="hero-desc">
+                SMDX Studio builds stunning websites and landing pages that convert visitors into customers. From
+                concept to launch, we make your brand unforgettable.
+            </p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn-primary">View Our Work</a>
+                <a href="#services" class="btn-outline">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-scroll">Scroll</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip">
+        <div class="marquee-track" id="marqueeTrack">
+            <!-- JS will duplicate -->
+            <span class="marquee-item"><span class="marquee-dot"></span>Custom Websites</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Landing Pages</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>E-Commerce</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Web Applications</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>SEO Optimization</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Performance Audit</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Custom Websites</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Landing Pages</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>E-Commerce</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Web Applications</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>SEO Optimization</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+            <span class="marquee-item"><span class="marquee-dot"></span>Performance Audit</span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-left reveal">
+                    <div class="section-label">— Who We Are</div>
+                    <h2 class="section-title">Pixel-perfect craft, <em>real results.</em></h2>
+                    <p>SMDX Studio is a boutique web agency obsessed with the art of digital storytelling. We combine
+                        strategic thinking with meticulous design to deliver websites that don't just look good they
+                        perform.</p>
+                    <p>Every project is approached with fresh eyes and a rigorous process that puts your business goals
+                        at the center of every decision we make.</p>
+                    <div class="about-stats">
+                        <div>
+                            <div class="stat-num" data-count="80">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div>
+                            <div class="stat-num" data-count="98">0</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div>
+                            <div class="stat-num" data-count="4">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right reveal" style="transition-delay:.15s">
+                    <div class="about-line"></div>
+                    <div class="about-image-frame">
+                        <canvas class="about-canvas" id="aboutCanvas"></canvas>
+                    </div>
+                    <div class="about-badge">
+                        <span>✦</span>
+                        <span>Award<br />Winning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-inner">
+            <div class="services-header reveal">
+                <div>
+                    <div class="section-label">— What We Do</div>
+                    <h2 class="section-title">Services built<br />for growth.</h2>
+                </div>
+                <p>We offer end-to-end web solutions tailored to your brand's unique voice and business objectives.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card reveal">
+                    <div class="service-num">01</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="4" y="8" width="40" height="28" rx="2" />
+                        <path d="M16 44h16M24 36v8" />
+                        <path d="M12 20l6 5-6 5M24 28h8" />
+                    </svg>
+                    <h3 class="service-title">Custom Websites</h3>
+                    <p class="service-desc">Bespoke, handcrafted websites designed from the ground up to match your
+                        brand identity and convert your ideal audience into loyal customers.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">HTML/CSS</span>
+                        <span class="service-tag">JavaScript</span>
+                        <span class="service-tag">CMS</span>
+                    </div>
+                </div>
+
+                <div class="service-card reveal" style="transition-delay:.08s">
+                    <div class="service-num">02</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 12h36M6 24h24M6 36h18" />
+                        <circle cx="38" cy="34" r="8" />
+                        <path d="M41 37l-5-5" />
+                    </svg>
+                    <h3 class="service-title">Landing Pages</h3>
+                    <p class="service-desc">High-converting landing pages engineered for campaigns, product launches, or
+                        lead generation every element strategically placed for maximum impact.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Conversion</span>
+                        <span class="service-tag">A/B Testing</span>
+                        <span class="service-tag">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="service-card reveal" style="transition-delay:.16s">
+                    <div class="service-num">03</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="6" y="6" width="36" height="36" rx="2" />
+                        <path d="M6 18h36" />
+                        <circle cx="12" cy="12" r="2" fill="currentColor" />
+                        <circle cx="20" cy="12" r="2" fill="currentColor" />
+                        <path d="M14 28h20M14 34h14" />
+                    </svg>
+                    <h3 class="service-title">E-Commerce</h3>
+                    <p class="service-desc">Full-featured online stores built to sell seamless product browsing,
+                        secure checkout, and an experience that keeps shoppers coming back.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Shopify</span>
+                        <span class="service-tag">WooCommerce</span>
+                        <span class="service-tag">Custom</span>
+                    </div>
+                </div>
+
+                <div class="service-card reveal" style="transition-delay:.24s">
+                    <div class="service-num">04</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M8 36L20 16l8 12 6-8 6 16" />
+                        <circle cx="36" cy="14" r="4" />
+                    </svg>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-desc">Research-driven design systems, wireframes, and prototypes that create
+                        intuitive, delightful user experiences across every touchpoint.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Figma</span>
+                        <span class="service-tag">Prototyping</span>
+                        <span class="service-tag">Research</span>
+                    </div>
+                </div>
+
+                <div class="service-card reveal" style="transition-delay:.32s">
+                    <div class="service-num">05</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 34V22a14 14 0 0128 0v12" />
+                        <rect x="4" y="32" width="10" height="8" rx="2" />
+                        <rect x="34" y="32" width="10" height="8" rx="2" />
+                    </svg>
+                    <h3 class="service-title">Web Applications</h3>
+                    <p class="service-desc">Scalable, performant web apps built with modern frameworks. From dashboards
+                        to SaaS tools we turn complex requirements into elegant software.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">React</span>
+                        <span class="service-tag">Next.js</span>
+                        <span class="service-tag">API</span>
+                    </div>
+                </div>
+
+                <div class="service-card reveal" style="transition-delay:.4s">
+                    <div class="service-num">06</div>
+                    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="24" cy="24" r="18" />
+                        <path d="M24 6v36M6 24h36" />
+                        <path d="M10 14c3.6 2 8.4 3 14 3s10.4-1 14-3M10 34c3.6-2 8.4-3 14-3s10.4 1 14 3" />
+                    </svg>
+                    <h3 class="service-title">SEO &amp; Performance</h3>
+                    <p class="service-desc">Technical SEO, Core Web Vitals optimization, and speed audits that push your
+                        site to the top of search rankings and keep users engaged.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Technical SEO</span>
+                        <span class="service-tag">Core Vitals</span>
+                        <span class="service-tag">Speed</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="section-inner">
+            <div class="process-header reveal">
+                <div class="section-label">— How We Work</div>
+                <h2 class="section-title">Four steps to<br /><em>launch day.</em></h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-circle">01</div>
+                    <h3 class="step-title">Discover</h3>
+                    <p class="step-desc">We deep-dive into your brand, audience, and goals. Strategy before execution
+                        always.</p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:.1s">
+                    <div class="step-circle">02</div>
+                    <h3 class="step-title">Design</h3>
+                    <p class="step-desc">Wireframes evolve into pixel-perfect mockups crafted with intention and refined
+                        with your feedback.</p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:.2s">
+                    <div class="step-circle">03</div>
+                    <h3 class="step-title">Build</h3>
+                    <p class="step-desc">Clean, performant code. Responsive across all devices. Tested rigorously before
+                        it goes anywhere near the live site.</p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:.3s">
+                    <div class="step-circle">04</div>
+                    <h3 class="step-title">Launch</h3>
+                    <p class="step-desc">Seamless deployment, post-launch monitoring, and ongoing support. We don't
+                        vanish after go-live.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <div class="section-inner">
+            <div class="portfolio-header reveal">
+                <div>
+                    <div class="section-label">— Our Work</div>
+                    <h2 class="section-title">Selected<br />projects.</h2>
+                </div>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Websites</button>
+                    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                    <button class="filter-btn" data-filter="ecom">E-Commerce</button>
+                </div>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <div class="portfolio-item reveal" data-cat="web">
+                    <canvas id="p1" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">Website</div>
+                        <div class="portfolio-name">Lumière Studio</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+                <div class="portfolio-item reveal" data-cat="landing" style="transition-delay:.08s">
+                    <canvas id="p2" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">Landing Page</div>
+                        <div class="portfolio-name">NovaTech SaaS</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+                <div class="portfolio-item reveal" data-cat="ecom" style="transition-delay:.16s">
+                    <canvas id="p3" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">E-Commerce</div>
+                        <div class="portfolio-name">Ember Goods</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+                <div class="portfolio-item reveal" data-cat="web" style="transition-delay:.08s">
+                    <canvas id="p4" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">Website</div>
+                        <div class="portfolio-name">Arcane Agency</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+                <div class="portfolio-item reveal" data-cat="landing" style="transition-delay:.16s">
+                    <canvas id="p5" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">Landing Page</div>
+                        <div class="portfolio-name">Pulse Finance</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+                <div class="portfolio-item reveal" data-cat="ecom" style="transition-delay:.24s">
+                    <canvas id="p6" width="600" height="450"></canvas>
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-cat">E-Commerce</div>
+                        <div class="portfolio-name">Bloom Botanics</div>
+                    </div>
+                    <div class="portfolio-arrow">↗</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div class="contact-left reveal">
+                    <div class="section-label">— Let's Talk</div>
+                    <h2 class="section-title">Ready to build something <em>great?</em></h2>
+                    <p>Tell us about your project and we'll get back to you within 24 hours with a tailored proposal. No
+                        jargon, no fluff just a clear plan to bring your vision to life.</p>
+                    <div class="contact-info">
+                        <div class="contact-row">
+                            <div class="contact-row-icon">✉</div>
+                            <a href="mailto:smdxstudio@gmail.com">smdxstudio@gmail.com</a>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-row-icon">◎</div>
+                            <a href="tel:+919870080547">+91 98700 80547</a>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-row-icon">◈</div>
+                            <span style="color:var(--text-muted)">Mon-Fri · 9am-7pm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right reveal" style="transition-delay:.15s">
+                    <div class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="John" />
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@company.com" />
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select>
+                                <option value="" disabled selected>Select a service…</option>
+                                <option>Custom Website</option>
+                                <option>Landing Page</option>
+                                <option>E-Commerce Store</option>
+                                <option>UI/UX Design</option>
+                                <option>Web Application</option>
+                                <option>SEO &amp; Performance</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tell Us About Your Project</label>
+                            <textarea rows="4" placeholder="Brief description, timeline, budget range…"></textarea>
+                        </div>
+                        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+                        <p class="form-note">★ No spam. No sharing. Just conversation.</p>
+                    </div>
+                    <div class="form-success" id="formSuccess">
+                        <div class="checkmark">✦</div>
+                        <h3>Message received!</h3>
+                        <p>We'll review your brief and reach out within 24 hours. Looking forward to working with you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="section-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-brand-name">SMD<span>X</span> Studio</div>
+                    <p>A boutique web agency crafting beautiful, high-performance digital experiences for ambitious
+                        brands.</p>
+                    <div class="footer-socials">
+                        <a class="social-link" href="#" title="X / Twitter">𝕏</a>
+                        <a class="social-link" href="#" title="Instagram">⬡</a>
+                        <a class="social-link" href="#" title="LinkedIn">in</a>
+                        <a class="social-link" href="#" title="Behance">Be</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Custom Websites</a></li>
+                        <li><a href="#services">Landing Pages</a></li>
+                        <li><a href="#services">E-Commerce</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Web Applications</a></li>
+                        <li><a href="#services">SEO &amp; Performance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:smdxstudio@gmail.com">smdxstudio@gmail.com</a></li>
+                        <li><a href="tel:+919870080547">+91 98700 80547</a></li>
+                        <li><a href="tel:+919870080547">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SMDX Studio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
